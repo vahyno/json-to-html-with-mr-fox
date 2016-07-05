@@ -9,9 +9,9 @@ Please clone this repo.
 
 Open `index.html` in your browser, and launch your Chrome Javascript Console.
 
-You will be coding in the files `scripts/app.js` and `index.html`.
+You will be coding in the `scripts/app.js` file (and a bit in `index.html`).
 
-Please note that the JSON object is accessible by typing `data`. Each time you refresh it will change a little bit (just to keep you on your toes!).
+Please note that the JSON object is accessible by typing `data` in your console. Each time you refresh it will change a little bit (just to keep you on your toes!).
 
 #### Pre-Requisite Skills
 * Getting Values from Objects and Arrays
@@ -21,6 +21,54 @@ Please note that the JSON object is accessible by typing `data`. Each time you r
     - Using the current index of the loop
 * Combining Strings using Concatination
     - Creating HTML strings
+
+## What is JSON?
+JSON is a convenient format for transferring data. It is supported in many languages, not just Javascript!
+
+Although Javascript Objects and JSON have a lot in common, JSON follows a slightly more strict format.
+
+Here is an example of a JSON object:
+
+``` json
+{
+    "key": "value"
+}
+```
+
+We can assign the object to a variable `o`.
+
+```js
+var o = {
+    "key": "value",
+    "list": ["a", "b", "c"]
+}
+```
+
+To access values, we need to know the name of the key. We can use either **dot notation** or **bracket notation**:
+``` js
+// dot notation
+o.key;      //=> "value"
+
+// bracket notation
+o["key"];   //=> "value"
+o['key'];   //=> "value"
+```
+
+Sometimes you'll need to "drill" down into an object to get the value you want.
+
+<details>
+<summary>**How would you get the value `"c"` from the list?** (Click Here)</summary>
+<br>
+```js
+o.list[2];      //=> "c"
+o["list"][2];   //=> "c"
+o['list'][2];   //=> "c"
+o["list"]["2"]; //=> "c"
+o['list']['2']; //=> "c"
+```
+
+But note that `o.list.2` will *never* work. Why is that?
+</details>
 
 ## Looping Lists
 Often we want to do this same thing multiple times, but with values at different indexes.
@@ -46,53 +94,6 @@ list.forEach(function(value, i){
 // 2 c
 ```
 
-## What is JSON?
-JSON is a convenient format for transferring data. It is supported in many languages, not just Javascript!
-
-Although Javascript Objects and JSON have a lot in common, JSON follows a slightly more strict format.
-
-Here is an example of a JSON object:
-
-``` json
-{
-    "key": "value"
-}
-```
-
-We can assign the object to a variable `o`.
-
-```js
-var o = {
-    "key": "value",
-    list: ["a", "b", "c"]
-}
-```
-
-To access values, we need to know the name of the key. We can use either **dot notation** or **bracket notation**:
-``` js
-// dot notation
-o.key;      //=> "value"
-
-// bracket notation
-o["key"];   //=> "value"
-o['key'];   //=> "value"
-```
-
-Sometimes you'll need to "drill" down into an object to get the value you want.
-
-<details>
-<summary>**How would you get the value `"c"`?** (Click Here)</summary>
-<br>
-```js
-o.list[2]; // "c"
-o.["list"][2]; // "c"
-o.['list'][2]; // "c"
-o.['list']['2']; // "c"
-o.['list']["2"]; // "c"
-```
-
-But note that `o.list.2` will *never* work. Why is that?
-</details>
 
 ## What is Concatination?
 When we combine strings together, it's known as "concatination". Here's an example:
@@ -114,7 +115,7 @@ When we combine strings together, it's known as "concatination". Here's an examp
 ```
 </details>
 
-We can create *HTML strings* by simpling creating a string containing HTML:
+We can create *HTML strings* by simpling creating a string containing HTML, but we have to be *very careful*(!):
 
 ```
 var p = "<p>simple paragraph</p>";
@@ -128,3 +129,6 @@ var dynamic_paragraph = (
 
 dynamic_paragraph //=> "<p>words words words!</p>"
 ```
+
+## Solution
+Please see the `solution` branch!
