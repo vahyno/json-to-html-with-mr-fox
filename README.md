@@ -19,7 +19,7 @@ Please note that the JSON object is accessible by typing `data` in your console.
     - Using Dot Notation
 * Looping over Arrays/Lists
     - Using the current index of the loop
-* Combining Strings using Concatination
+* Combining Strings using Concatenation
     - Creating HTML strings
 
 ## What is JSON?
@@ -95,8 +95,8 @@ list.forEach(function(value, i){
 ```
 
 
-## What is Concatination?
-When we combine strings together, it's known as "concatination". Here's an example:
+## What is Concatenation?
+When we combine strings together, it's known as "concatenation". Here's an example:
 
 ```
 "1" + "1";                  //=> "11"
