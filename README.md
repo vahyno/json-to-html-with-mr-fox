@@ -57,7 +57,7 @@ o['key'];   //=> "value"
 Sometimes you'll need to "drill" down into an object to get the value you want.
 
 <details>
-<summary>**How would you get the value `"c"` from the list?** (Click Here)</summary>
+<summary>How would you get the value `"c"` from the list? (Click Here)</summary>
 <br>
 ```js
 o.list[2];      //=> "c"
@@ -117,7 +117,7 @@ When we combine strings together, it's known as "concatenation". Here's an examp
 ```
 
 <details>
-<summary>**""What'll happen when you "quote" a quote?", he asked, helplessly"** (Click Here)</summary>
+<summary>""What'll happen when you "quote" a quote?", he asked, helplessly" (Click Here)</summary>
 <br>
 ```js
 'this "works"'
