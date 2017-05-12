@@ -58,7 +58,7 @@ Sometimes you'll need to "drill" down into an object to get the value you want.
 
 <details>
 <summary>How would you get the value `"c"` from the list? (Click Here)</summary>
-<br>
+
 ```js
 o.list[2];      //=> "c"
 o["list"][2];   //=> "c"
@@ -68,6 +68,7 @@ o['list']['2']; //=> "c"
 ```
 
 But note that `o.list.2` will *never* work. Why is that?
+
 </details>
 
 ## Looping Lists
@@ -118,13 +119,14 @@ When we combine strings together, it's known as "concatenation". Here's an examp
 
 <details>
 <summary>""What'll happen when you "quote" a quote?", he asked, helplessly" (Click Here)</summary>
-<br>
+
 ```js
 'this "works"'
 "and this'll work"
 'but don't do this!' // SyntaxError
 "He said \"don't\" do this, but I'm clever" // escape inner quotes with forward slash
 ```
+
 </details>
 
 We can create *HTML strings* by simpling creating a string containing HTML, but we have to be *very careful*(!):
