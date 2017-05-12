@@ -6,10 +6,10 @@ $(document).on('ready', function(){
     {expected: data.first_name, selector: ".first_name"},
     {expected: data.occupation, selector: ".occupation"},
     {expected: data.location,   selector: ".location"},
-    {expected: data.qualities.join(".*"), selector: ".qualities"},
+    {expected: data.qualities.join("(.|\s)*"), selector: ".qualities"},
     {expected: data.siblings.length, selector: ".sibling_count"},
-    {expected: data.siblings.map(function(v){ return v.first_name + ".*" + v.age; }).join(".*"), selector: ".sibling_list"},
-    {expected: data.hobbies.map(function(v){ return v.name; }).join(".*"), selector: '.hobby_links a[href^="https://en.wikipedia.org/wiki/"]'} // hardcoded wiki url
+    {expected: data.siblings.map(function(v){ return v.first_name + "(.|\s)*" + v.age; }).join("(.|\s)*"), selector: ".sibling_list"},
+    {expected: data.hobbies.map(function(v){ return v.name; }).join("(.|\s)*"), selector: '.hobby_links a[href^="https://en.wikipedia.org/wiki/"]'} // hardcoded wiki url
   ];
 
 
