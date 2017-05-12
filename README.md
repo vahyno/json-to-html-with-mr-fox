@@ -83,7 +83,19 @@ for(var i=0; i<list.length; i++){
 // 2 c
 ```
 
-We can do the same thing with the powerful `forEach` Array method:
+We can do the same thing with the new ES6 [`for...of`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of) loop:
+
+```
+let list = ["a", "b", "c"];
+for(let item of list){
+  console.log(item);
+}
+// a
+// b
+// c
+```
+
+And we can do the same thing with the powerful `forEach` Array method:
 ```
 var list = ["a", "b", "c"];
 list.forEach(function(value, i){
@@ -95,7 +107,7 @@ list.forEach(function(value, i){
 ```
 
 
-## What is Concatenation?
+## What is Concatenation? (Hard!)
 When we combine strings together, it's known as "concatenation". Here's an example:
 
 ```
@@ -128,6 +140,22 @@ var dynamic_paragraph = (
 );
 
 dynamic_paragraph //=> "<p>words words words!</p>"
+```
+
+## What is a Template String? (Easy!)
+New to ES6 are template strings. Once you get the hang of it, these are a lot easier than the string concatenation method above.
+
+```
+let foo = "bar";
+`${foo}`;                  //=> "bar"
+`${foo} ${foo}`            //=> "bar bar"
+```
+
+```
+let words = "words words words";
+let html_string = `<p>${words}!</p>`;
+
+html_string //=> "<p>words words words!</p>"
 ```
 
 ## Solution
